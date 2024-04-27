@@ -1,99 +1,90 @@
+# News Agents
 
-# Agentes News
+The idea behind this project is to create a newsletter team that researches, creates, formats, and reviews content based on automated document scraping and formatting.
 
-Uma breve descrição sobre o que esse projeto faz e para quem ele é
+## Features
 
+- [x] Create Agent Diagram for research
+- [x] Research
+- [x] Format Research
+- [x] Save Research
+- [x] Retrieve Research
+- [ ] Perform Embeddings
+- [ ] Create Agents to interact with research data
+- [x] Save research and retrieve data
+- [ ] Create blacklist
+- [ ] Proxy system
+- [ ] Create a Telegram chatbot to receive selected articles
 
-## Funcionalidades
-- [ ] cria Diagrama de agentes para pequisa 
-- [x]  Pesquisa
-- [x]  Formata Pesquisa
-- [x] Salva Pesquisa
-- [x] Recupera Pesquisa
-- [ ] Realiza Embbedings
-- [ ] Cria Agentes para interagia com os dados da pesquisa
-- [x] Salva pesquisa e recupera dados
-- [ ] cria blacklist
-- [ ] sistema de proxy
-- [ ] cria um chatbot no telegram para recebe os articlos pontos
+## Exclusion List Websites
 
+Some websites are ignored during news scraping due to the nature of their elements. They are:
 
+- www.metropoles.com
+- g1.globo.com
+- dinheirama.com
+- valor.globo.com
+- www.terra.com.br
+- www.viomundo.com.br
+- sputniknewsbr.com.br
+- www.bbc.com
+- www.infomoney.com.br
 
+## Future Improvements
 
-## Sites de Lista de classes, IDs e seletores a serem ignorados na raspagem das noticias
-      Website onde estão sendo ignorando os elementos.
-        - www.metropoles.com
-        - g1.globo.com
-        - dinheirama.com
-        - valor.globo.com
-        - www.terra.com.br
-        - www.viomundo.com.br
-        - sputniknewsbr.com.br
-        - www.bbc.com
-        - www.infomoney.com.br
+Using agents asynchronously to automate the collection of articles.
 
-## Melhorias
+## Used Stack
 
-Utiliza de forma assicrona os agentes para cria de forma automatica os articlos
+**Back-end:**
+- crewai
+- requests
+- langchain_google_genai
+- langchain_community
+- python-dotenv
+- langchain-chroma
+- pyTelegramBotAPI
+- "unstructured[md]"
 
+## Environment Variables
 
-## Screenshots
+To run this project, you need to set the following environment variables in your `.env` file:
 
+- `NEWS_API_KEY`
+- `GOOGLE_API_KEY`
 
-
-## Stack utilizada
-
-**Back-end:** 
-crewai 
-requests 
-langchain_google_genai 
-langchain_community
-requests
-python-dotenv
-langchain-chroma
-pyTelegramBotAPI
-"unstructured[md]"
-
-
-## Variáveis de Ambiente
-
-Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
-
-`NEWS_API_KEY`
-
-`GOOGLE_API_KEY`
-
-
-sites para pega os token
+Sites to get the API keys:
 - [Gemini Pro](https://ai.google.dev/)
 - [text](https://newsapi.org/)
 
-## Rodando localmente
+## Running Locally
 
-Clone o projeto
+Clone the repository:
 
 ```bash
-  git clone https://link-para-o-projeto
+git clone https://link-to-the-project
 ```
 
-Entre no diretório do projeto
+Navigate to the project directory:
 
 ```bash
-  cd my-project
-```
-Ative o ambiente
-```bash
-  ./Scripts/activate
+cd my-project
 ```
 
-Instale as dependências
+Activate the virtual environment:
 
 ```bash
-  pip install -r requeriments.txt
+./Scripts/activate
 ```
 
-Inicie o servidor
+Install dependencies:
 
 ```bash
-  python main.py
+pip install -r requirements.txt
+```
+
+Start the server:
+
+```bash
+python main.py
 ```
