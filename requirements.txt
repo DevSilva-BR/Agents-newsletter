@@ -1,0 +1,11 @@
+crewai 
+requests 
+duckduckgo-search  
+langchain_openai 
+langchain_google_genai 
+langchain_community
+requests
+python-dotenv
+langchain-chroma
+pyTelegramBotAPI
+"unstructured[md]"
