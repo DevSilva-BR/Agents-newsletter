@@ -16,6 +16,24 @@ The idea behind this project is to create a newsletter team that researches, cre
 - [ ] Proxy system
 - [ ] Create a Telegram chatbot to receive selected articles
 
+## Diagram
+```mermaid
+graph TD
+  A[Start]
+  A --> B{Research Agents}
+  B -->|Geopolitics| C[Geopolitics Agents]
+  B -->|Economy| D[Economy Agents]
+  B -->|International Relations| E[International Relations Agents]
+  B -->|Cryptocurrencies| F[Cryptocurrencies Agents]
+  B -->|Writing| G[Writing Agents]
+  G --> H{Formatting Agents}
+  H --> I{Review Agents}
+  I -->|Done| J[End]
+  C --> G
+  D --> G
+  E --> G
+  F --> G
+```
 ## Exclusion List Websites
 
 Some websites are ignored during news scraping due to the nature of their elements. They are:
