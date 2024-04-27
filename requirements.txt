@@ -8,4 +8,4 @@ requests
 python-dotenv
 langchain-chroma
 pyTelegramBotAPI
-"unstructured[md]"
+unstructured[md]
