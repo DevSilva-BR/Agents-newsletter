@@ -8,30 +8,51 @@ Uma breve descrição sobre o que esse projeto faz e para quem ele é
 - [ ] cria Diagrama de agentes para pequisa 
 - [x]  Pesquisa
 - [x]  Formata Pesquisa
-- [] Cria Agentes para interagia com os dados da pesquisa
-- [] Salva pesquisa e recupera dados
-- []
+- [x] Salva Pesquisa
+- [x] Recupera Pesquisa
+- [ ] Realiza Embbedings
+- [ ] Cria Agentes para interagia com os dados da pesquisa
+- [x] Salva pesquisa e recupera dados
+- [ ] cria blacklist
+- [ ] sistema de proxy
+- [ ] cria um chatbot no telegram para recebe os articlos pontos
 
 
 
-## Sites
-[text](https://g1.globo.com/)
-https://www.uol.com.br/
+
+## Sites de Lista de classes, IDs e seletores a serem ignorados na raspagem das noticias
+      Website onde estão sendo ignorando os elementos.
+        - www.metropoles.com
+        - g1.globo.com
+        - dinheirama.com
+        - valor.globo.com
+        - www.terra.com.br
+        - www.viomundo.com.br
+        - sputniknewsbr.com.br
+        - www.bbc.com
+        - www.infomoney.com.br
 
 ## Melhorias
 
-Que melhorias você fez no seu código? Ex: refatorações, melhorias de performance, acessibilidade, etc
+Utiliza de forma assicrona os agentes para cria de forma automatica os articlos
 
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 
 ## Stack utilizada
 
-**Back-end:** Python, CrewAI, Langchain, google genai(gemini-pro), requests, pyTelegramAPI
+**Back-end:** 
+crewai 
+requests 
+langchain_google_genai 
+langchain_community
+requests
+python-dotenv
+langchain-chroma
+pyTelegramBotAPI
+"unstructured[md]"
 
 
 ## Variáveis de Ambiente
@@ -42,18 +63,11 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 
 `GOOGLE_API_KEY`
 
-`BOT_TOKEN`
 
-## Instalação
+sites para pega os token
+- [Gemini Pro](https://ai.google.dev/)
+- [text](https://newsapi.org/)
 
-Instale o projeto
-
-```bash
-  ./Scripts/
-  pip install -r requeriments.txt
-  cd my-project
-```
-    
 ## Rodando localmente
 
 Clone o projeto
@@ -83,5 +97,3 @@ Inicie o servidor
 ```bash
   python main.py
 ```
-
-

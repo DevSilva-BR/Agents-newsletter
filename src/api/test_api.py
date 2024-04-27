@@ -2,7 +2,6 @@ import requests
 
 class Test_API:
     def __init__(self):
-        self.API_KEY = "c30e67be0d1540bc83050a5100daba57"
         self.base_url = "https://newsapi.org/v2/everything"
     def test_api_connection(self, api):
         query = "brasil"
@@ -20,7 +19,3 @@ class Test_API:
             return f"Api valida: {response.status_code}"
         else:
             return f"Failed to fetch articles, status code: {response.status_code}, response: {response.text}"
-
-
-
-

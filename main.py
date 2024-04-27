@@ -9,23 +9,23 @@ print("""
     [1] Newsletter
     [2] Scraper News
     [3] Test API
-    [3] Sair
+    [4] Sair
     ----------->
                 by Jemison
 """)
 print(10*"---")
 def main():
-    while True:
+    while select != False:
         select = input("Digite sua opção: \n1 - News\n2 - Scraper\n3 - Test\n")
-
         if select == "1" or select == "News":
-            # Add code for the News option here
-            pass
+            main
         elif select == "2" or select == "Scraper":
             tools
         elif select == "3" or select == "Test":
             api = input("Digite a api para testa: \nApi:")
             test_api_connection(api)
+        elif: select == "4" or select == "Sair":
+            select = False
         else:
             print("Opção inválida, tente novamente.")
             continue

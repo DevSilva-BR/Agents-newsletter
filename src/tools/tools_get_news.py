@@ -4,19 +4,24 @@ from datetime import datetime, date, timedelta
 from bs4 import BeautifulSoup
 from langchain_community.document_loaders import UnstructuredFileLoader
 from langchain.tools import tool
+from dotenv import load_dotenv
 
 
 from src.utils.ignored_elements import get_ignored_elements
 from src.utils.queries import queries_polity
 from src.utils.format_markdown import FormatDocs
+# from src.utils.blacklist import blacklist
+
+load_dotenv()
 
 class Tools:
     def __init__(self):
-        self.API_KEY = "baa6eff12c304cd0a001c6d5be834f1a"
+        # self.API_KEY = "baa6eff12c304cd0a001c6d5be834f1a"
+        self.API_KEY = os.getenv("NEWS_API_KEY")
         self.base_url = "https://newsapi.org/v2/everything"
-        self.markdown_api_key = "sk-126257ec6338b7af559ae68d6172e9fd"
         self.ignored_elements = get_ignored_elements()
         self.formatter = FormatDocs()
+        # use queries_polity for query in list
         self.queries = ["brasil", "china", "economia"]  # Example queries
 
     # @tool("fetch article")
@@ -77,11 +82,14 @@ class Tools:
         try:
             articles = self.fetch_news()
             markdown_content = self.formatter.format_to_markdown(articles)
-            markdown_save = self.formatter.save_data(articles)
-            # loader = ObsidianLoader(markdown_content)
-            # docs = loader.load()
+            markdown_save = self.formatter.save_articles(articles)
+            # markdow_save = self.formatter.load_context()
             return markdown_save
         except Exception as e:
             print(f"An error occurred: {e}")
     
-    
+
+
+result = Tools()
+rr = result.create_post()
+print(f"result: {rr}")

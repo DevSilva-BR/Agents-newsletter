@@ -4,10 +4,13 @@ from langchain_google_genai import (
     HarmBlockThreshold,
     HarmCategory
 )
+from dotenv import load_dotenv
+
+load_dotenv()
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-pro",
-    google_api_key=os.environ.get("GOOGLE_API_KEY") or "AIzaSyDtMlbtG6HhOSeJeoMxabLsJ0piFQC_PwA",
+    google_api_key=os.getenv("GOOGLE_API_KEY"),
     max_output_tokens=8192,
     convert_system_message_to_human=False,
     verbose=False,
