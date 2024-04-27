@@ -62,7 +62,7 @@ Sites to get the API keys:
 Clone the repository:
 
 ```bash
-git clone https://link-to-the-project
+git clone https://github.com/DevSilva-BR/Agents-newsletter.git
 ```
 
 Navigate to the project directory:
